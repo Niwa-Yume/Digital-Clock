@@ -33,9 +33,12 @@
 
             /* On affiche le temps dans le DOM */
 
-            heure.innerHTML = currentTime.getHours();
-            minute.innerHTML = currentTime.getMinutes();
-            seconde.innerHTML = currentTime.getSeconds();
+            heure.innerHTML = currentTime.getHours()<10 ? "0"+currentTime.getHours() : currentTime.getHours();
+            minute.innerHTML = currentTime.getMinutes()<10 ? "0"+currentTime.getMinutes() : currentTime.getMinutes();
+            seconde.innerHTML = currentTime.getSeconds()<10 ? "0"+currentTime.getSeconds() : currentTime.getSeconds();
+
+            /*<10 ? "0"+currentTime.getSeconds() : currentTime.getSeconds();*/
+            /* On recupere les valeurs et on y mets un 0 devant si c'est en dessous de 10 */
         }, 1000);
     
     </script>
